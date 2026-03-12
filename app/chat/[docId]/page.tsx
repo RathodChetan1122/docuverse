@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
+import { use, useEffect, useRef, useState } from "react";
 
 interface Source {
   page: number;
@@ -13,6 +13,7 @@ interface Message {
   role: "user" | "assistant";
   content: string;
   sources?: Source[];
+  isSummary?: boolean;
 }
 
 function getSessionId(): string {
