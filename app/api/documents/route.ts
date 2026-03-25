@@ -1,6 +1,6 @@
 import { redis } from "@/lib/redis";
 import { NextRequest, NextResponse } from "next/server";
-
+    
 export async function GET(req: NextRequest) {
   try {
     const sessionId = req.nextUrl.searchParams.get("sessionId") || "default";
