@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
 
     if (docIds.length === 0) {
       return NextResponse.json({ documents: [] });
-    }
+    }  
 
     const documents = await Promise.all(
       docIds.map(async (docId) => {
